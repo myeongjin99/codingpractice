@@ -9,18 +9,23 @@ function solution(a, b) {
     const week_name = ['THU','FRI','SAT','SUN','MON','TUE','WED'];
     let answer = '';
     let date =0;
-    //0이면 목요일
-     //요일계산 
+//     //0이면 목요일
+//      //요일계산 
     
-    if(a===1){
-        date += b;
-    }else{
-        for(let i=0;i<a-1;i++){ //이전달의 날의 합 더래준다
-            date += month_day[i];
-        }
-        date += b;
-    }
-    answer = week_name[date % 7];
+//     if(a===1){
+//         date += b;
+//     }else{
+//         for(let i=0;i<a-1;i++){ //이전달의 날의 합 더래준다
+//             date += month_day[i];
+//         }
+//         date += b;
+//     }
+//     answer = week_name[date % 7];
     
-    return answer;
+    //a-1은 인덱스값이다.
+    // return answer;
+    
+    let tempDate = new Date(2016, a-1, b);
+    
+    return tempDate.toString().slice(0,3).toUpperCase();
 }
