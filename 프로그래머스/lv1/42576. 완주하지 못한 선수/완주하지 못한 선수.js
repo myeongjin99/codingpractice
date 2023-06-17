@@ -4,7 +4,9 @@ function solution(participant, completion) {
     // let difference = participant.filter(x => !completion.includes(x))
     // return difference.join("");  
     participant.sort();
+    console.log(participant)
     completion.sort();
+    console.log(completion)
     for(let i=0;i<participant.length;i++){
         if(participant[i] !== completion[i]){
             return participant[i]
