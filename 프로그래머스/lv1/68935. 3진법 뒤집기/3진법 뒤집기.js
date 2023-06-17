@@ -1,18 +1,14 @@
-function solution(n) {
-    //2진법(0,1)
-    //2진법(0,1,2)
-    //3진법(0,1,2)
-    //parseInt("문자열",진법) //진법 표기를 10진법으로 보여준다.
-    
-    // n (10진법상 정수) => 3진법 바꿔야돼요 => 3진법을 뒤집고 => 3진법을 10진법으로 보여준다
+function solution(n){
     let answer = 0;
-    let b = n.toString(3);
     
-    let arr = [...b];
-    arr.reverse();
-    
-    let str = arr.join("")
-    
+    // 1.n을 문자열로 바꾸고 3진법으로 바꾸기
+    let a = n.toString(3)
+    // 2.배열로 바꾸고 3진법을 뒤집기
+    let arr = [...a];
+    let b = arr.reverse();
+    let str = b.join("");
+    // 3.3진법을 10진법으로 표현
     answer = parseInt(str,3)
-    return answer;
+    
+    return answer
 }
