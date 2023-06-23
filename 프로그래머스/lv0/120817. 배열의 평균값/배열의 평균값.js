@@ -1,8 +1,7 @@
 function solution(numbers){
     let sum = 0;
-   for(let i=0;i<numbers.length;i++){
-       sum += numbers[i];
-   };
-    sum = sum / numbers.length
-    return sum
-};
+    numbers.map((item)=>{
+        sum += item
+    })
+    return sum/numbers.length
+}
